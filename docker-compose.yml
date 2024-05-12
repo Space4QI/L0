@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  nats-streaming:
+    container_name: my-nats-streaming
+    image: nats-streaming
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    command: [ "-p", "4222", "-m", "8222", "--store", "file", "--dir", "/data", "--max_age", "72h" ]
+  
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: itsme
+      POSTGRES_DB: mypostgres
+    volumes:
+      - ./createDB.sql:/docker-entrypoint-initdb.d/createDB.sql
+    ports:
+      - "5432:5432"

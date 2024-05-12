@@ -1,0 +1,49 @@
+{
+  "order_uid": "123456",
+  "track_number": "ABC123",
+  "entry": "New order",
+  "delivery": {
+    "name": "John Doe",
+    "phone": "+123456789",
+    "zip": "12345",
+    "city": "City",
+    "address": "123 Street",
+    "region": "Region",
+    "email": "john@example.com"
+  },
+  "payment": {
+    "transaction": "123abc",
+    "request_id": "request123",
+    "currency": "USD",
+    "provider": "Stripe",
+    "amount": 1812,
+    "payment_dt": 222222,
+    "bank": "Bank",
+    "delivery_cost": 100,
+    "goods_total": 900,
+    "custom_fee": 50
+  },
+  "items": [
+    {
+      "chrt_id": 12231,
+      "track_number": "DEF456",
+      "price": 500,
+      "rid": "rid123",
+      "name": "Item 1",
+      "sale": 10,
+      "size": "M",
+      "total_price": 500,
+      "nm_id": 2332,
+      "brand": "Brand",
+      "status": 200
+    }
+  ],
+  "locale": "en-US",
+  "internal_signature": "signature123",
+  "customer_id": "customer123",
+  "delivery_service": "Express",
+  "shardkey": "shardkey123",
+  "sm_id": 92,
+  "date_created": "2024-05-10",
+  "oof_shard": "oofshard123"
+}
